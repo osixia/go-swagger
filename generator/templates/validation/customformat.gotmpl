@@ -1,8 +1,8 @@
 {{ if ne .SwaggerFormat "byte" -}}
   {{- if .IsAliased }}
-  if err := validate.FormatOf({{ if .Path }}{{ .Path }}{{ else }}""{{ end }}, {{ printf "%q" .Location }}, {{ printf "%q" .SwaggerFormat }}, {{ .AliasedType }}({{.ValueExpression }}).String(), formats); err != nil {
+  if err := validate.FormatOf({{ if .Path }}{{ .Path }}{{ else }}""{{ end }}, {{ printf "%q" .Location }}, {{ printf "%q" .SwaggerFormat }}, {{ .AliasedType }}({{.ValueExpression }}).String(), route.Formats); err != nil {
   {{- else }}
-  if err := validate.FormatOf({{ if .Path }}{{ .Path }}{{ else }}""{{ end }}, {{ printf "%q" .Location }}, {{ printf "%q" .SwaggerFormat }}, {{.ValueExpression }}.String(), formats); err != nil {
+  if err := validate.FormatOf({{ if .Path }}{{ .Path }}{{ else }}""{{ end }}, {{ printf "%q" .Location }}, {{ printf "%q" .SwaggerFormat }}, {{.ValueExpression }}.String(), route.Formats); err != nil {
   {{- end }}
   return err
   }

@@ -340,7 +340,7 @@ func makeGenDefinitionHierarchy(name, pkg, container string, schema spec.Schema,
 		"github.com/go-openapi/swag",
 		"github.com/go-openapi/validate",
 		"github.com/go-openapi/runtime/middleware",
-		"gitlab.osixia.net/synco/go-utils/go-swagger/extensions",
+		"gitlab.osixia.net/go/x/go-swagger/extensions",
 	}
 
 	return &GenDefinition{
